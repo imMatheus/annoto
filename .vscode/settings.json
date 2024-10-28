@@ -2,8 +2,8 @@
   "eslint.workingDirectories": [
     {
       "directory": "apps/server",
-      "changeProcessCWD": true
+      "changeProcessCWD": true,
+      "deno.enable": true
     }
-  ],
-  "deno.enable": true
+  ]
 }
