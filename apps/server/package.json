@@ -1,0 +1,11 @@
+{
+  "name": "server",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "deno run -N --watch main.ts"
+  },
+  "dependencies": {
+    "hono": "^4.6.7"
+  }
+}
