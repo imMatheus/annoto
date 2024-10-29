@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "deno run -N --watch main.ts"
+    "dev": "deno run -N --watch --allow-env --allow-read --env-file --unstable-sloppy-imports src/main.ts"
   },
   "dependencies": {
-    "hono": "^4.6.7"
+    "hono": "^4.6.7",
+    "@repo/db": "workspace:*"
   }
 }
