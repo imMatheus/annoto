@@ -12,6 +12,8 @@
     "@chakra-ui/react": "^3.0.1",
     "@emotion/react": "^11.13.3",
     "@repo/ui": "workspace:*",
+    "@supabase/ssr": "^0.5.1",
+    "@supabase/supabase-js": "^2.39.7",
     "next": "14.2.6",
     "next-themes": "^0.3.0",
     "react": "18.3.1",

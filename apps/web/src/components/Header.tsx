@@ -1,8 +1,15 @@
 import { Flex, Text } from "@chakra-ui/react"
 import React from "react"
 import { Button } from "@/components/ui/button"
+import { createClient } from "@/utils/supabase/server"
+import Link from "next/link"
 
-export const Header: React.FC = () => {
+export const Header: React.FC = async () => {
+  const client = await createClient()
+  const { data } = await client.auth.getUser()
+  const user = data.user
+  console.log({ user })
+
   return (
     <Flex
       as="header"
@@ -19,7 +26,13 @@ export const Header: React.FC = () => {
       >
         Annoto
       </Text>
-      <Button size="sm">Login</Button>
+      {user ? (
+        <Button size="sm">Logout</Button>
+      ) : (
+        <Link href="/login">
+          <Button size="sm">Login</Button>
+        </Link>
+      )}
     </Flex>
   )
 }

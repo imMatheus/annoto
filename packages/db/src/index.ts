@@ -31,6 +31,5 @@ const queryClient = postgres(process.env.DATABASE_URL!)
 // Create Drizzle client
 export const db = drizzle(queryClient, { schema })
 
-export const adam = { adam: "name" }
 // Export schema
 export * from "./schema"

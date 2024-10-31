@@ -15,4 +15,11 @@ export const organizationTable = pgTable("organization", {
   updatedAt: timestamp("updated_at").defaultNow().notNull(),
 })
 
+export const profileTable = pgTable("profile", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  name: text("name"),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+  updatedAt: timestamp("updated_at").defaultNow().notNull(),
+})
+
 // Add more schemas as needed

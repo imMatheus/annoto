@@ -1,5 +1,5 @@
 import { Hono } from "hono"
-import { adam, db, organizationTable } from "@repo/db"
+import { db, organizationTable } from "@repo/db"
 
 export const app = new Hono()
 
@@ -9,5 +9,5 @@ app.get("/", async (c) => {
   })
 
   const orgs = await db.select().from(organizationTable)
-  return c.json({ adam, orgs })
+  return c.json({ orgs })
 })
